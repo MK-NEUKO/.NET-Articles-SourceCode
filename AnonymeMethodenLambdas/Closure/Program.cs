@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Closure
 {
@@ -20,12 +21,10 @@ namespace Closure
                     Console.WriteLine(planet);
                 }
             };
-
             anonymeMethode();
 
 
             int meineZahl = 77;
-
             Console.WriteLine();
             Console.WriteLine($"Die Variable \"meineZahl\" vor allen Aufrufen:........{meineZahl}");
                    
@@ -39,7 +38,7 @@ namespace Closure
 
             Console.WriteLine("--------------------------------------------------------");
             ErhöheMeineZahl(meineZahl);
-            Console.WriteLine($"Ausserhalb und nach ErhöheMeineZahl():............{meineZahl}");           
+            Console.WriteLine($"Ausserhalb und nach ErhöheMeineZahl():............{meineZahl}");
         }
 
         private static void ErhöheMeineZahl(int meineZahl)

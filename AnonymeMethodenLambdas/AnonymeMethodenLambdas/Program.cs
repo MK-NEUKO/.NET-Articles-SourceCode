@@ -28,6 +28,7 @@ namespace AnonymeMethodenLambdas
             Func<int, int> lambda4 = wert => wert * wert;
 
             // Ein Lambda ohne Parameter, der Closure nutzt.
+            // Achtung: Die leeren Klammern müssen angegeben werden.
             Action lambda5 = () => Console.WriteLine(meinText);
 
             Console.WriteLine(anonymeMethode(7, 3));
