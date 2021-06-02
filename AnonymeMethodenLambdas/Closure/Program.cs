@@ -26,17 +26,27 @@ namespace Closure
 
             int meineZahl = 77;
             Console.WriteLine();
-            Console.WriteLine($"Die Variable \"meineZahl\" vor allen Aufrufen:........{meineZahl}");
-                   
+            Console.WriteLine($"Die Variable \"meineZahl\" vor allen Aufrufen:.......................{meineZahl}");
+            Console.WriteLine("---------------------------------------------------------------------");
+
             Action anonymeMethode2 = () =>
             {
                 meineZahl++;
-                Console.WriteLine($"In der anonymen Methode nach der Inkrementierung:...{meineZahl}");
+                Console.WriteLine($"In der anonymen Methode (mit Closure) nach der Inkrementierung:....{meineZahl}");
             };
             anonymeMethode2();
-            Console.WriteLine($"Ausserhalb und nach der anonymen Methode:...........{meineZahl}");
+            Console.WriteLine($"Ausserhalb und nach der anonymen Methode (mit Closure):............{meineZahl}");
+            Console.WriteLine("---------------------------------------------------------------------");
 
-            Console.WriteLine("--------------------------------------------------------");
+            Action<int> anonymeMethode3 = delegate (int zahl)
+            {
+                zahl++;
+                Console.WriteLine($"In der anonymen Methode (ohne Closure) nach der Inkrementierung:...{zahl}");
+            };
+            anonymeMethode3(meineZahl);
+            Console.WriteLine($"Ausserhalb und nach der anonymen Methode (ohne Closure):...........{meineZahl}");
+            Console.WriteLine("---------------------------------------------------------------------");
+
             ErhöheMeineZahl(meineZahl);
             Console.WriteLine($"Ausserhalb und nach ErhöheMeineZahl():............{meineZahl}");
         }
