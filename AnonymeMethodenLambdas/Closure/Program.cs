@@ -35,7 +35,7 @@ namespace Closure
                 Console.WriteLine($"In der anonymen Methode (mit Closure) nach der Inkrementierung:....{meineZahl}");
             };
             anonymeMethode2();
-            Console.WriteLine($"Ausserhalb und nach der anonymen Methode (mit Closure):............{meineZahl}");
+            Console.WriteLine($"Außerhalb und nach der anonymen Methode (mit Closure):............{meineZahl}");
             Console.WriteLine("---------------------------------------------------------------------");
 
             Action<int> anonymeMethode3 = delegate (int zahl)
@@ -44,11 +44,11 @@ namespace Closure
                 Console.WriteLine($"In der anonymen Methode (ohne Closure) nach der Inkrementierung:...{zahl}");
             };
             anonymeMethode3(meineZahl);
-            Console.WriteLine($"Ausserhalb und nach der anonymen Methode (ohne Closure):...........{meineZahl}");
+            Console.WriteLine($"Außerhalb und nach der anonymen Methode (ohne Closure):...........{meineZahl}");
             Console.WriteLine("---------------------------------------------------------------------");
 
             ErhöheMeineZahl(meineZahl);
-            Console.WriteLine($"Ausserhalb und nach ErhöheMeineZahl():............{meineZahl}");
+            Console.WriteLine($"Außerhalb und nach ErhöheMeineZahl():............{meineZahl}");
         }
 
         private static void ErhöheMeineZahl(int meineZahl)
